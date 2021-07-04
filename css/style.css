@@ -1,0 +1,802 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*Global CSS*/
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Raleway', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*========
+Header CSS
+========*/
+header{
+	background: #000;
+}
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fff; 
+    margin-left: 35px;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+.navbar-light .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: -100%;
+    background: #ff8b38;
+    width: 50%;
+    height: 2px;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.navbar-light .navbar-nav .nav-link:hover::after {
+    left: 0;
+    z-index: 1;
+}
+.navbar-light .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -100%;
+    background: #ff8b38;
+    width: 50%;
+    height: 2px;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.navbar-light .navbar-nav .nav-link:hover::before {
+    right: 0;
+    z-index: 1;
+}
+.navbar>.container, .navbar>.container-fluid, 
+.navbar>.container-lg, .navbar>.container-md, 
+.navbar>.container-sm, .navbar>.container-xl, 
+.navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff8b38;
+}
+.sticky{
+    position: fixed;
+    width: 100%;
+    background: #bae2c3;   
+}
+
+/*========
+Banner CSS
+========*/
+.banner-section{
+    background: url(../img/banner-bg.png) no-repeat center top;
+    background-size: cover;
+}
+.banner-section img{
+    margin-top: 110px;
+    margin-bottom: 35px;
+    width: 20%;
+    height: auto;
+}
+.banner-section h1{
+    font-size: 30px;
+    color: #fff;
+    padding: 0 50px 0 0;
+    line-height: 38px;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 60px;
+}
+.banner-section h1::after{
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    width: 12%;
+    height: 2px;
+    background: #fff;
+}
+.banner-section p{
+    color: #717276;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+.banner-section button{
+    margin-bottom: 100px;
+    border: 2px solid #fff;
+    background: transparent;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 700;
+}
+.banner-section button::before{
+    content: "";
+    position: absolute;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.banner-section button:hover::before{
+    left: 0%;  
+} 
+.banner-section button:hover{
+    color: #000;
+}
+.form-group{
+    margin-top: 150px;
+    background: #fff;
+}
+.form-heading{
+    background: #f5f5f5;
+}
+.form-heading h2{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 700;
+    margin: 0;
+}
+.form-heading h2 span{
+    color: #ff9b51;
+}
+.form-control{
+    border: none;
+    border-bottom: 2px solid #d6d6d6;
+    margin-bottom: 30px;
+}
+.form-box{
+    padding: 20px 50px;
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #ff9b51;
+}
+.btn-banner{
+    border: none;
+    background: #de670f;
+    width: 100%;
+    padding: 15px;
+    font-weight: 700;
+}
+.btn-banner:hover{
+    background: #ff9b51;
+    color: #fff;
+}
+
+
+/*==============
+Social Media CSS
+==============*/
+.social-media{
+    margin: 20px 0;
+}
+.social-media h3{
+    font-size: 20px;
+    color: #333333;
+    font-weight: 700;
+}
+.social-media p{
+    color: #cccccc;
+    font-size: 16px;
+    margin: 0;
+}
+.social-media ul{
+    padding: 0;
+    margin: 0;
+}
+.social-media ul li a:hover{
+    color: #ff8b38;
+}
+.social-media ul li{
+    list-style: none;
+    display: inline;
+}
+.social-media ul li a{
+    color: #ccc;
+    font-size: 50px;
+    margin-left: 42px;
+}
+.social-media .icons{
+    margin-top: 9px;
+}
+.border-blur{
+    border-bottom: 2px solid #000;
+    filter: blur(1px);
+}
+
+
+/*=================
+Feature Section CSS
+=================*/
+.feature-section{
+    background: #f5f5f5;
+    padding: 100px 0;
+}
+.feature-section .feature-tab .active{
+    background: #ff8b38;
+}
+.feature-section .feature-tab ul{
+    cursor: pointer;
+}
+.feature-section .feature-tab ul{
+    padding: 0;
+    margin: 0;
+}
+.feature-section .feature-tab ul li{
+    list-style: none;
+    background: #333333;
+    margin-bottom: 1px;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.feature-content{
+    margin-top: 35px;
+}
+.feature-content h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.feature-content p{
+    color: #86878b;
+    font-size: 13px;
+}
+.feature-content .feature-btn{
+    border: none;
+    background: #ff8b38;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.feature-content .feature-btn:hover{
+    background: #333333;
+}
+.img-fluid{
+    margin-top: 26px;
+    margin-left: 100px;
+}
+
+
+/*=====================
+Feature-one Section CSS
+=====================*/
+.feature-one-section{
+    padding: 100px 0 60px;
+}
+.feature-one-section .img-fluid{
+    margin: auto;
+    width: 80%;
+    box-shadow: 5px 5px 8px 2px #e4e4e4;
+}
+.right-content{
+    margin-top: -20px;
+}
+.feature-one-section h3{
+    font-size: 16px;
+    font-weight: 800;
+}
+.ft-separator{
+    background: #ff8b38;
+    width: 60px;
+    height: 2px;
+    margin: 10px 0;
+}
+.right-content p{
+    font-size: 13px;
+    margin: 0;
+    color: #c3c3c5;
+    padding-right: 160px;
+    margin-bottom: 42px;
+}
+.title-one ul{
+    padding: 0;
+}
+.title-one ul li{
+    list-style: none;
+    color: #ff8b38;
+}
+.title-one ul li .fa{
+    background: #fff;
+    border: 2px solid #ff8b38;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.title-content{
+    margin-top: -7px;
+    margin-left: -23px;
+}
+.title-content h4{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/*=====================
+Feature-two Section CSS
+=====================*/
+.feature-two-section{
+    padding: 100px 0;
+    background: #f5f5f5;
+}
+.feature-two-section h3{
+    font-size: 16px;
+    font-weight: 800;
+}
+.left-content .ft-separator{
+    background: #ff8b38;
+    width: 60px;
+    height: 2px;
+    margin: 30px 0;
+}
+.left-content p{
+    font-size: 13px;
+    margin: 0;
+    color: #c3c3c5;
+    padding-right: 120px;
+}
+.left-content .left-ft-para{
+    margin-bottom: 20px;
+}
+.feature-two-section .img-fluid{
+    width: 80%;
+    box-shadow: 5px 5px 8px 2px #e4e4e4;
+}
+
+
+/*===============
+Char. Section CSS
+===============*/
+.char-section{
+    padding: 100px 0;   
+}
+.char-section h1{
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+.char-section .hd-separtor{
+    background: #ff8b38;
+    width: 60px;
+    height: 2px;
+    margin: 20px auto;
+}
+.char-section p{
+    text-align: center;
+    font-size: 11px;
+    color: #c3c3c5;
+}
+.char{
+    margin-top: 50px;
+}
+.char ul{
+    padding: 0;
+}
+.char ul li{
+    list-style: none;
+    color: #ff8b38;
+    display: block;
+    text-align: center;
+}
+.char ul li .fa{
+    background: #fff;
+    border: 1.9px solid #ff8b38;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 45px;
+    font-size: 26px;
+}
+.char h3{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+
+/*=================
+Pricing Section CSS
+=================*/
+.pricing-section{
+    padding: 100px 0;
+    background: #f5f5f5;  
+}
+.pricing-section h1{
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+.pricing-section .hd-separtor{
+    background: #ff8b38;
+    width: 60px;
+    height: 2px;
+    margin: 20px auto;
+}
+.pricing-section p{
+    text-align: center;
+    font-size: 11px;
+    color: #c3c3c5;
+    margin-bottom: 100px;
+}
+.pricing-one h4{
+    text-align: center;
+    background: #333333;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 16px;
+}
+.pricing-one h1{
+    font-size: 70px;
+    color: #fff;
+    background: #333;
+    padding-bottom: 5px;
+    font-weight: 800;
+    margin: 0;
+}
+.pricing-one span{
+    font-size: 25px;
+}
+.pricing-one p{
+    background: #333;
+    padding: 10px 0;
+    color: #939393;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 5px solid #ff8b38;
+}
+.pricing-one h5{
+    text-align: center;
+    padding: 7px 0;
+    border-bottom: 2px solid #f5f5f5;
+    background: #fff;
+    color: #8e8f92;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+}
+.pricing-one{
+    margin-right: 32px;
+}
+.pricing-two{
+    margin-left: 32px;
+}
+.content-align{
+    align-items: flex-end;
+}
+.popular-pricing h4{
+    text-align: center;
+    background: #333333;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 16px;
+}
+.popular-pricing h1{
+    font-size: 70px;
+    color: #fff;
+    background: #333;
+    padding-bottom: 5px;
+    font-weight: 800;
+    margin: 0;
+}
+.popular-pricing span{
+    font-size: 25px;
+}
+.popular-pricing p{
+    background: #333;
+    padding: 10px 0;
+    color: #939393;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+.popular-pricing h5{
+    text-align: center;
+    padding: 7px 0;
+    border-bottom: 2px solid #f5f5f5;
+    background: #fff;
+    color: #8e8f92;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+}
+.popular-pricing .popular{
+    background: #ff8b38;
+    color: #fff;
+}
+.pricing-two h4{
+    text-align: center;
+    background: #333333;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 16px;
+}
+.pricing-two h1{
+    font-size: 70px;
+    color: #fff;
+    background: #333;
+    padding-bottom: 5px;
+    font-weight: 800;
+    margin: 0;
+}
+.pricing-two span{
+    font-size: 25px;
+}
+.pricing-two p{
+    background: #333;
+    padding: 10px 0;
+    color: #939393;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 5px solid #ff8b38;
+}
+.pricing-two h5{
+    text-align: center;
+    padding: 7px 0;
+    border-bottom: 2px solid #f5f5f5;
+    background: #fff;
+    color: #8e8f92;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+/*==================
+Feedback Section CSS
+==================*/
+.feedback-section{
+    padding: 100px 0;
+}
+.feedback-section h1{
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+.feedback-section .hd-separtor{
+    background: #ff8b38;
+    width: 60px;
+    height: 2px;
+    margin: 20px auto;
+}
+.feedback-section p{
+    text-align: center;
+    font-size: 11px;
+    color: #c3c3c5;
+    margin: 0 0 50px 0;
+}
+.feedback-content p{
+    margin: 0;
+    background: #f5f5f5;
+    padding: 20px 10px;
+    text-align: left;
+    margin-right: 67px;
+    color: #8d8e92;
+    font-weight: 600;
+    margin-left: 65px;
+}
+.arrow{
+    background: #f5f5f5;
+    width: 20px;
+    height: 20px;
+    margin-left: 90px;
+    margin-top: -12px;
+    transform: rotate(45deg);
+}
+.img-fluid{
+    margin-left: 65px;
+    margin-top: 10px;
+}
+.name-designation{
+    margin-left: 53px;
+    margin-top: 27px;
+}
+.name-designation h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.name-designation h4{
+    font-size: 12px;
+    color: #a4a5a8;
+    font-weight: 500;
+}
+
+
+/*================
+Design Section CSS
+================*/
+.design-section{
+    background: url(../img/design-bg.png) no-repeat center top;
+    background-size: cover;
+    padding: 50px 0;
+}
+.design-section h1{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+.design-section .hd-separtor{
+    background: #ff8b38;
+    width: 60px;
+    height: 2px;
+    margin: 20px auto;
+}
+.design-section p{
+    text-align: center;
+    font-size: 11px;
+    color: #c3c3c5;
+    margin: 0 0 25px 0;
+}
+.design-bt{
+    border: 2px solid #fff;
+    background: transparent;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0 auto;
+    display: block;
+}
+.design-bt:hover{
+    background: #ff8b38;
+    color: #000;
+}
+
+
+/*=================
+Contact Section CSS
+=================*/
+.contact-section{
+    padding: 100px 0;
+}
+.contact-section h1{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: #212121;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+.contact-section .hd-separtor{
+    background: #ff8b38;
+    width: 60px;
+    height: 2px;
+    margin: 20px auto;
+}
+.contact-section p{
+    text-align: center;
+    font-size: 11px;
+    color: #c3c3c5;
+    margin: 0 0 25px 0;
+}
+.contact-control{
+    border: none;
+    border-bottom: 2px solid #d6d6d6;
+    margin-bottom: 40px;
+    width: 95%;
+    padding: 0 0 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.contact-box{
+    padding: 20px 10px;
+}
+.contact-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #ff9b51;
+}
+::placeholder{
+    color: green;
+    font-size: 16px;
+    font-weight: 800;
+}
+.message-control{
+    border: none;
+    border-bottom: 2px solid #d6d6d6;
+    margin-top: 24px;
+    width: 95%;
+    padding: 0 0 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.message-box{
+    padding: 20px 10px;
+}
+.message-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #ff9b51;
+}
+textarea{
+    overflow: hidden;
+}
+.send-btn{
+    border: none;
+    background: #f56702 ;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+.send-btn:hover{
+    background: #ff8b38;
+}
+
+
+/*=================
+Footer Section CSS
+=================*/
+.footer-media{
+    background: #000;
+}
+.footer-media ul{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.footer-media ul li a:hover{
+    color: #ff8b38; 
+}
+.footer-media ul li{
+    list-style: none;
+    display: inline;
+}
+.footer-media ul li a{
+    color: #ccc;
+    font-size: 35px;
+    padding: 0px 20px;
+}
+.footer-media .icons{
+    margin: 10px 0;
+}
+.footer-media .copyright{
+    text-align: center;
+    color: #ccc;
+}
